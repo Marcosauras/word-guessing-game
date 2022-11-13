@@ -5,32 +5,32 @@
 // step 5 make the toal of wins and losses stay on the sceen
 // 
 
-const wordOptions = ["Banana", "Taco", "Pinapple"]
+let wordOptions = ["Banana", "Taco", "Pinapple"]
+let startButton = document.getElementById("start-game")
 let letterContainer = document.getElementById("letter-container");
 let optionsContainer = document.getElementById("options-container")
-let startButton = document.getElementById("start-game")
-let word = []
 
-const randomNum =(max) => {
-  return Math.floor(Math.random() * max);
-}
 
-startButton.addEventListener("click", startGame)
-function startGame(){
-  wordText.textContent ="";
-  word = wordOptions[randomNum(wordOptions.length)];
+let guess = []
+let answer = "";
+
+function randomWord(){
+  guess.textContent = "";
+  answer = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+
   for (let i = 0; i < wordOptions.length; i++){
     wordText.textContent += "_"
   }
-  console.log(word)
-
-
-  
-
 }
-
 
 function keydownAction(event) {
 //   tells what key is being pressed
   document.querySelector("#key").innerHTML = event.key;
 }
+
+startButton.addEventListener("click", startGame)
+function startGame() {
+  randomWord()
+}
+
+

@@ -49,7 +49,7 @@ margin: 0px;
 
 }
 
-.start-game{
+#start-game{
     display: flex;
     float: right;
     margin: 15px;
