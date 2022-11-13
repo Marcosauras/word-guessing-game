@@ -1,0 +1,57 @@
+:root {
+    --g1: #f4c531;
+    --g2: rgb(22, 167, 41);
+    --g3: rgb(72, 28, 230);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "";
+}
+
+
+@keyframes background-pan {
+from {
+    background-position: 0% center;
+}
+
+to {
+    background-position: -200% center;
+}
+}
+
+body {
+    background-color: #f4c531;
+animation: background-pan 10s linear infinite;
+background: linear-gradient(
+    to right,
+    var(--g1),
+    var(--g2),
+    var(--g1)
+);
+background-size: 200%;
+height: 100vh;
+overflow: hidden;
+margin: 0px;
+}
+
+.container{
+    font-size: 16px;
+    background-color: white;
+    border-radius: 15px;
+    width: 90vw;
+    height: 50vh;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+
+}
+
+.start-game{
+    display: flex;
+    float: right;
+    margin: 15px;
+    padding: 5px;
+}
